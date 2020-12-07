@@ -15,8 +15,8 @@ pg = Postgres()
 #pg.create_table()
 
 # Herokuの変数からトークンなどを取得
-channel_secret = os.environ['LINE_CHANNEL_SECRET']
-channel_access_token = os.environ['LINE_CHANNEL_ACCESS_TOKEN']
+channel_secret = os.environ['cccf85bd55377e830ee2dc1b2063124f']
+channel_access_token = os.environ['xQrJyG3QBgOi7f6MQQe42n504MccCzXG1YFSke/lLztj28pwEXz9dVeVWJgkGnGkpTWhDxvXqjIsHLJikeKJhpwtXDZTulIs+B3fs750SqdQNai6UE3h/8sN60D/ccBOWWR8rA5LU0yDiUeRdbEWLwdB04t89/1O/w1cDnyilFU=']
 if channel_secret is None:
     print('Specify LINE_CHANNEL_SECRET as environment variable.')
     sys.exit(1)
@@ -45,10 +45,10 @@ def callback():
     return 'OK'
 
 # フォローされたらDBへユーザー情報登録
-@handler.add(FollowEvent)
-def handle_follow(event):
-    if not pg.is_user_exists(event.source.user_id):
-        pg.register_user(event.source.user_id)
+#@handler.add(FollowEvent)
+#def handle_follow(event):
+#    if not pg.is_user_exists(event.source.user_id):
+#        pg.register_user(event.source.user_id)
 
 """
 LINEでMessageEvent（普通のメッセージを送信された場合）が起こった場合
