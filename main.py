@@ -61,7 +61,7 @@ def handle_message(event):
     # message.text)に応じて返信する
     line_bot_api.reply_message(
     event.reply_token,
-    TextSendMessage(text=os.environ[res.getResponse(event.message.text)])
+    TextSendMessage(text=res.getResponse(event.message.text))
     )
     
 def push_message():
