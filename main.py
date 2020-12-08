@@ -6,11 +6,11 @@ from flask import Flask, request, abort
 from linebot import LineBotApi, WebhookHandler
 from linebot.exceptions import InvalidSignatureError
 from linebot.models import MessageEvent, TextMessage, TextSendMessage, FollowEvent
-from postgres import Postgres
+#from postgres import Postgres
 
 app = Flask(__name__)
 res = Response()
-pg = Postgres()
+#pg = Postgres()
 
 #pg.create_table()
 
